@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    OpenRouter Coding Agent
+</title>
+
+<link
+    rel="stylesheet"
+    href="/static/app.css"
+>
+
+</head>
+
+<body>
+
+<div class="app">
+
+<header>
+
+<div>
+
+<h1>
+    OpenRouter Coding Agent
+</h1>
+
+<p>
+    Build projects inside an isolated workspace.
+</p>
+
+</div>
+
+<div
+    id="statusBadge"
+    class="badge"
+>
+    Idle
+</div>
+
+</header>
+
+
+<section class="panel">
+
+<label>
+    What should I build?
+</label>
+
+<textarea
+    id="prompt"
+    rows="9"
+    placeholder="Example: Build a full-stack ecommerce website..."
+></textarea>
+
+
+<div class="grid">
+
+<div>
+
+<label>
+    API Key
+</label>
+
+<select id="key"></select>
+
+</div>
+
+
+<div>
+
+<label>
+    Model
+</label>
+
+<select id="model"></select>
+
+</div>
+
+</div>
+
+
+<button
+    id="start"
+>
+    Analyze & Build
+</button>
+
+</section>
+
+
+<section
+    id="taskPanel"
+    class="panel hidden"
+>
+
+<div class="taskHeader">
+
+<div>
+
+<h2>
+    Current Task
+</h2>
+
+<p id="taskId"></p>
+
+</div>
+
+
+<a
+    id="download"
+    class="button secondary hidden"
+>
+    Download ZIP
+</a>
+
+</div>
+
+
+<div class="progress">
+
+<div
+    id="progressBar"
+></div>
+
+</div>
+
+
+<div
+    id="progressText"
+    class="progressText"
+>
+    0%
+</div>
+
+
+<div
+    id="selectionBox"
+    class="selection hidden"
+>
+
+<h3>
+    Agent needs your choice
+</h3>
+
+<p id="question"></p>
+
+
+<div class="grid">
+
+<div>
+
+<label>
+    API Key
+</label>
+
+<select
+    id="changeKey"
+></select>
+
+</div>
+
+
+<div>
+
+<label>
+    Model
+</label>
+
+<select
+    id="changeModel"
+></select>
+
+</div>
+
+</div>
+
+
+<button
+    id="continue"
+>
+    Continue from checkpoint
+</button>
+
+</div>
+
+
+<div class="columns">
+
+<div>
+
+<h3>
+    Work Log
+</h3>
+
+<pre
+    id="log"
+></pre>
+
+</div>
+
+
+<div>
+
+<h3>
+    Project Files
+</h3>
+
+<ul
+    id="files"
+></ul>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+
+<script
+    src="/static/app.js"
+></script>
+
+</body>
+
+</html>
